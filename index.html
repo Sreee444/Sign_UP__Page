@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <!-- Forms Section -->
+            <div id="formsContainer">
+                <!-- Login Form -->
+                <div id="loginFormContainer" class="form-container">
+                    <div class="form-header">
+                        <h2>Login to Your Account</h2>
+                        <p>Welcome back! Please login to continue.</p>
+                    </div>
+                    <form id="loginForm">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group password-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <span id="togglePassword" class="eye-icon">
+                                <!-- Eye Icon SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/>
+                                    <line class="eyelid" x1="4" y1="4" x2="20" y2="4" stroke="black" stroke-width="2"/>
+                                    <circle class="eye" cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button type="submit">Login</button>
+                        </div>
+                        <p class="toggle-form">Don't have an account? <span id="signUpLink">Sign Up</span></p>
+                        <p class="toggle-form">Forgot your password? <span id="forgotPasswordLink">Reset it here</span></p>
+                    </form>
+                </div>
+
+                <!-- Signup Form (Initially Hidden) -->
+                <div id="signupFormContainer" class="form-container" style="display: none;">
+                    <div class="form-header">
+                        <h2>Create a New Account</h2>
+                        <p>Sign up to get started with us!</p>
+                    </div>
+                    <form id="signupForm">
+                        <div class="input-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group password-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" name="signupPassword" placeholder="Enter your password" required>
+                            <span id="toggleSignupPassword" class="eye-icon">
+                                <!-- Eye Icon SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/>
+                                    <line class="eyelid" x1="4" y1="4" x2="20" y2="4" stroke="black" stroke-width="2"/>
+                                    <circle class="eye" cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="input-group password-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                            <span id="toggleConfirmPassword" class="eye-icon">
+                                <!-- Eye Icon SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/>
+                                    <line class="eyelid" x1="4" y1="4" x2="20" y2="4" stroke="black" stroke-width="2"/>
+                                    <circle class="eye" cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button type="submit">Sign Up</button>
+                        </div>
+                        <p class="toggle-form">Already have an account? <span id="loginLink">Login</span></p>
+                    </form>
+                </div>
+
+                <!-- Forgot Password Form (Initially Hidden) -->
+                <div id="forgotPasswordFormContainer" class="form-container" style="display: none;">
+                    <div class="form-header">
+                        <h2>Reset Your Password</h2>
+                        <p>Enter your email address to receive a password reset link.</p>
+                    </div>
+                    <form id="forgotPasswordForm">
+                        <div class="input-group">
+                            <label for="forgotEmail">Email</label>
+                            <input type="email" id="forgotEmail" name="forgotEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="actions">
+                            <button type="submit">Send Reset Link</button>
+                        </div>
+                    </form>
+                    <p class="toggle-form">Remember your password? <span id="backToLoginLink">Back to Login</span></p>
+                </div>
+            </div>
+
+            <!-- Success Message Section -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p id="successText"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invalid Credentials Message -->
+    <div class="invalid-credentials">Invalid email or password. Please try again.</div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
